@@ -40,7 +40,7 @@ public class Test17 {
 
               }
 
-              right++;
+              right--;
 
           }
 
