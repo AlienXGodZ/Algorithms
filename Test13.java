@@ -17,6 +17,8 @@ public class Test13 {
             if(total == 10){
 
                 System.out.println(arr[left] + " " + arr[right]);
+                System.out.println("Founded");
+                return;
 
             }
 
