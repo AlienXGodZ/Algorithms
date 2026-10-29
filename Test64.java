@@ -19,7 +19,7 @@ public class Test64{
 
             if(i > 1){
 
-                 twostep = dp[i - 2] + Math.abs(height[i] - height[i - 1]);
+                 twostep = dp[i - 2] + Math.abs(height[i] - height[i - 2]);
 
             }
 
