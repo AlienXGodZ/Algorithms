@@ -1,11 +1,10 @@
 public class Test105 {
 
     public static int knapsack(
-            int[] weight, int[] value, int capacity) {
+            int[] weight, int[] value, int capacity,int[][] dp) {
 
         int n = weight.length;
 
-        int[][] dp = new int[n + 1][capacity + 1];
 
         // Start from the last item
         for (int i = n - 1; i >= 0; i--) {
@@ -36,7 +35,23 @@ public class Test105 {
         int[] value = {10, 20, 30};
         int capacity = 6;
 
+        int n = weight.length;
+
+        int[][] dp = new int[n + 1][capacity + 1];
+
         System.out.println(
-                knapsack(weight, value, capacity));
+                knapsack(weight, value, capacity,dp));
+
+        for(int i = 0; i <= n ;i++){
+
+            for(int j = 0; j <= capacity; j++){
+
+                System.out.print(dp[i][j] + "\t");
+
+            }
+
+            System.out.println();
+
+        }
     }
 }
