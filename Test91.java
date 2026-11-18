@@ -63,5 +63,17 @@ public class Test91 {
         int result = editDistance(s1, s2, 0, 0, dp);
 
         System.out.println("Edit Distance: " + result);
+
+        for(int i = 0; i < s1.length(); i++ ){
+
+            for(int j = 0; j < s2.length(); j++){
+
+                System.out.print(dp[i][j] + " ");
+
+            }
+
+            System.out.println();
+
+        }
     }
 }

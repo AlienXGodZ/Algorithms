@@ -1,10 +1,10 @@
 public class Test88 {
 
-    public static int lis(int[] arr) {
+    public static int lis(int[] arr,int[][] dp,int n) {
 
-        int n = arr.length;
 
-        int[][] dp = new int[n + 1][n + 1];
+
+
 
         // Start from the last index
         for (int index = n - 1; index >= 0; index--) {
@@ -35,6 +35,22 @@ public class Test88 {
 
         int[] arr = {3, 1, 2, 5, 4};
 
-        System.out.println("LIS Length: " + lis(arr));
+        int n = arr.length;
+
+        int[][] dp = new int[n + 1][n + 1];
+
+        System.out.println("LIS Length: " + lis(arr,dp,n));
+
+        for(int i = 0; i <= n; i++){
+
+            for(int j = 0; j <= n; j++){
+
+                System.out.print(dp[i][j] + " ");
+
+            }
+
+            System.out.println();
+
+        }
     }
 }
